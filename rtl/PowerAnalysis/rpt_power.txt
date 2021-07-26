@@ -1,0 +1,58 @@
+Information: Changed wire load model for 'StateMachine' from '(none)' to '10k'. (OPT-170)
+Information: Updating design information... (UID-85)
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 14:31:09 2020
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+StateMachine           10k               c35_CORELIB_WC
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  14.6440 uW   (69%)
+  Net Switching Power  =   6.5254 uW   (31%)
+                         ---------
+Total Dynamic Power    =  21.1694 uW  (100%)
+
+Cell Leakage Power     =  26.4051 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential     9.9764e-03        3.2740e-03        9.8937e+03        1.3260e-02  (  62.56%)
+combinational  4.6675e-03        3.2514e-03        1.6511e+04        7.9355e-03  (  37.44%)
+--------------------------------------------------------------------------------------------------
+Total          1.4644e-02 mW     6.5254e-03 mW     2.6405e+04 pW     2.1196e-02 mW
+1

@@ -1,0 +1,6 @@
+mkdir logs
+mkdir sources
+mkdir netlist
+cp -i ../Behavioral/StateMachine.v sources/
+source sourcefiles
+design_vision &

@@ -1,0 +1,58 @@
+ 
+****************************************
+Report : power
+        -cell
+        -analysis_effort low
+        -sort_mode cell_internal_power
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 14:31:58 2020
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+StateMachine           10k               c35_CORELIB_WC
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+
+  Attributes
+  ----------
+      h  -  Hierarchical cell
+
+                        Cell      Driven Net  Tot Dynamic      Cell
+                        Internal  Switching   Power            Leakage
+Cell                    Power     Power       (% Cell/Tot)     Power      Attrs
+--------------------------------------------------------------------------------
+state_reg[0]            5.123e-03 1.530e-03   6.65e-03 (77%)   4946.8730   
+state_reg[1]            4.853e-03 1.744e-03   6.60e-03 (74%)   4946.8730   
+U12                     1.507e-03 4.206e-04   1.93e-03 (78%)   3871.3750   
+U14                     9.198e-04 4.469e-04   1.37e-03 (67%)   1135.5090   
+U13                     4.720e-04 1.014e-03   1.49e-03 (32%)    931.0979   
+U21                     4.488e-04 2.867e-04   7.35e-04 (61%)   1706.6218   
+U20                     3.928e-04 2.273e-04   6.20e-04 (63%)   1707.7819   
+U15                     3.168e-04 3.838e-04   7.01e-04 (45%)    402.2033   
+U18                     2.842e-04 1.667e-04   4.51e-04 (63%)   1707.7819   
+U19                     1.645e-04 9.556e-05   2.60e-04 (63%)   2037.8223   
+U17                     1.059e-04 1.608e-04   2.67e-04 (40%)   2757.2231   
+U16                     5.580e-05 4.886e-05   1.05e-04 (53%)    253.9080   
+--------------------------------------------------------------------------------
+Totals (12 cells)         14.644uW   6.525uW    21.169uW (69%)   26.405nW
+1

@@ -1,0 +1,7 @@
+cp -i ../Synthesis/netlist/Syn_StateMachine.sdf ./
+cp -i ../Synthesis/netlist/Syn_StateMachine.v ./
+cp -i ../Behavioral/StateMachine_tb.v ./
+cp -i ../Behavioral/InputVector.txt ./
+source synopsys_linux_vJ-2014_cshrc
+vcs -debug +v2k ./StateMachine_tb.v ./Syn_StateMachine.v -f ./library.f
+simv -gui

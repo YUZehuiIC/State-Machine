@@ -1,0 +1,378 @@
+1
+ 
+****************************************
+Report : area
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+Number of ports:                            9
+Number of nets:                            21
+Number of cells:                           12
+Number of combinational cells:             10
+Number of sequential cells:                 2
+Number of macros/black boxes:               0
+Number of buf/inv:                          1
+Number of references:                      10
+
+Combinational area:                837.199997
+Buf/Inv area:                       54.599998
+Noncombinational area:             618.799988
+Macro/Black Box area:                0.000000
+Net Interconnect area:             279.000000
+
+Total cell area:                  1455.999985
+Total area:                       1734.999985
+1
+ 
+****************************************
+Report : design
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+Design allows ideal nets on clock nets.
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+Local Link Library:
+
+    {c35_CORELIB_WC.db, c35_IOLIB_WC.db, c35_IOLIBV5_WC.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : WORST-MIL
+    Library : c35_CORELIB_WC
+    Process :   1.40
+    Temperature : 150.00
+    Voltage :   3.00
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    Selected manually by the user.
+
+Name           :   10k
+Location       :   c35_CORELIB_WC
+Resistance     :   0.0014
+Capacitance    :   0.001633
+Area           :   1.8
+Slope          :   5
+Fanout   Length   Points Average Cap Std Deviation
+--------------------------------------------------------------
+     1     5.00
+
+
+
+Wire Loading Model Mode: enclosed.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+
+    Design: StateMachine
+
+    max_area               0.00
+  - Current Area        1735.00
+  ------------------------------
+    Slack              -1735.00  (VIOLATED)
+
+
+1
+ 
+****************************************
+Report : timing
+        -path end
+        -delay max
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Endpoint                         Path Delay     Path Required     Slack
+------------------------------------------------------------------------
+S (out)                             8.00 r           92.50        84.50
+COUT (out)                          7.55 f           92.50        84.95
+state_reg[0]/D (DFC1)               6.74 f           97.50        90.76
+state_reg[1]/D (DFC1)               5.34 f           97.50        92.16
+
+1
+ 
+****************************************
+Report : clock_gating
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------
+          |    Number of Clock gating elements    |        0         |
+          |                                       |                  |
+          |    Number of Gated registers          |     0 (0.00%)    |
+          |                                       |                  |
+          |    Number of Ungated registers        |     2 (100.00%)  |
+          |                                       |                  |
+          |    Total number of registers          |        2         |
+          ------------------------------------------------------------
+
+
+
+1
+Loading db file '/net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+StateMachine           10k               c35_CORELIB_WC
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   9.2997 uW   (72%)
+  Net Switching Power  =   3.6983 uW   (28%)
+                         ---------
+Total Dynamic Power    =  12.9980 uW  (100%)
+
+Cell Leakage Power     =  26.4051 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       7.2589e-03        9.5437e-04        9.8937e+03        8.2231e-03  (  63.14%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.0409e-03        2.7439e-03        1.6511e+04        4.8013e-03  (  36.86%)
+--------------------------------------------------------------------------------------------------
+Total          9.2997e-03 mW     3.6983e-03 mW     2.6405e+04 pW     1.3024e-02 mW
+1
+ 
+****************************************
+Report : qor
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+
+  Timing Path Group 'CLK'
+  -----------------------------------
+  Levels of Logic:               3.00
+  Critical Path Length:          3.00
+  Critical Path Slack:          84.50
+  Critical Path Clk Period:    100.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          0
+  Hierarchical Port Count:          0
+  Leaf Cell Count:                 12
+  Buf/Inv Cell Count:               1
+  Buf Cell Count:                   1
+  Inv Cell Count:                   0
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:        10
+  Sequential Cell Count:            2
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:      837.199997
+  Noncombinational Area:   618.799988
+  Buf/Inv Area:             54.599998
+  Total Buffer Area:            54.60
+  Total Inverter Area:           0.00
+  Macro/Black Box Area:      0.000000
+  Net Area:                279.000000
+  -----------------------------------
+  Cell Area:              1455.999985
+  Design Area:            1734.999985
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:            21
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: vlsilinux07
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.01
+  Logic Optimization:                  0.08
+  Mapping Optimization:                0.36
+  -----------------------------------------
+  Overall Compile Time:                1.35
+  Overall Compile Wall Clock Time:     2.37
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+ 
+****************************************
+Report : hierarchy
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+StateMachine
+    AOI221          c35_CORELIB_WC
+    BUF2            c35_CORELIB_WC
+    DFC1            c35_CORELIB_WC
+    NAND30          c35_CORELIB_WC
+    NOR21           c35_CORELIB_WC
+    NOR23           c35_CORELIB_WC
+    OAI210          c35_CORELIB_WC
+    XNR20           c35_CORELIB_WC
+    XNR21           c35_CORELIB_WC
+    XOR21           c35_CORELIB_WC
+1
+ 
+****************************************
+Report : reference
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 15:34:15 2020
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AOI221             c35_CORELIB_WC
+                                 91.000000       1     91.000000  
+BUF2               c35_CORELIB_WC
+                                 54.599998       1     54.599998  
+DFC1               c35_CORELIB_WC
+                                309.399994       2    618.799988  n
+NAND30             c35_CORELIB_WC
+                                 72.800003       1     72.800003  
+NOR21              c35_CORELIB_WC
+                                 54.599998       2    109.199997  
+NOR23              c35_CORELIB_WC
+                                 91.000000       1     91.000000  
+OAI210             c35_CORELIB_WC
+                                 72.800003       1     72.800003  
+XNR20              c35_CORELIB_WC
+                                109.199997       1    109.199997  
+XNR21              c35_CORELIB_WC
+                                109.199997       1    109.199997  
+XOR21              c35_CORELIB_WC
+                                127.400002       1    127.400002  
+-----------------------------------------------------------------------------
+Total 10 references                                  1455.999985
+1

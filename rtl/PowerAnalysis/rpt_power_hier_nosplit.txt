@@ -1,0 +1,39 @@
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : StateMachine
+Version: J-2014.09-SP2
+Date   : Mon Oct  5 14:31:52 2020
+****************************************
+
+
+Library(s) Used:
+
+    c35_CORELIB_WC (File: /net/vlsiserver/usr1/library/AMS/AMS_4.1_CDS/synopsys/c35_3.3V/c35_CORELIB_WC.db)
+
+
+Operating Conditions: WORST-MIL   Library: c35_CORELIB_WC
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+StateMachine           10k               c35_CORELIB_WC
+
+
+Global Operating Voltage = 3    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+StateMachine                           6.53e-03 1.46e-02 2.64e+04 2.12e-02 100.0
+1
